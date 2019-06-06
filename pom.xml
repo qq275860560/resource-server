@@ -4,7 +4,7 @@
 
     <groupId>com.github.qq275860560</groupId>
 	<artifactId>github-qq275860560-resource-server</artifactId>
-	<version>20190530</version>
+	<version>20190607</version>
 	<packaging>jar</packaging>
 	<name>github-qq275860560-resource-server</name>
 	<description>github-qq275860560-resource-server</description>	
@@ -20,26 +20,28 @@
     <dependencies>          
 		<dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-       	<dependency>
-		    <groupId>org.springframework.security</groupId>
-		    <artifactId>spring-security-jwt</artifactId>
-		    <version>1.0.10.RELEASE</version>
-		</dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>        
         <dependency>
-		   <groupId>org.projectlombok</groupId>
-		   <artifactId>lombok</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.springframework.security.oauth</groupId>
-		    <artifactId>spring-security-oauth2</artifactId>
-		    <version>2.3.5.RELEASE</version>
-		</dependency>	
+            <groupId>org.springframework.security.oauth</groupId>
+            <artifactId>spring-security-oauth2</artifactId>
+            <version>2.3.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+            <version>2.1.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
 		<dependency>
 	         <groupId>org.springframework.boot</groupId>
 	         <artifactId>spring-boot-starter-test</artifactId>
@@ -49,7 +51,7 @@
 	        <groupId>org.apache.httpcomponents</groupId>
 	        <artifactId>httpclient</artifactId>
 	        <scope>test</scope>
-	    </dependency>
+	    </dependency>       
  	</dependencies>
     <build>
 		<plugins>
