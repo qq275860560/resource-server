@@ -32,6 +32,8 @@ public class ResourceController {
 					put("id", id);
 					put("username", username);
 					put("clientId", clientId);
+					put("userDetails", oAuth2Authentication.getUserAuthentication());
+					put("clientDetails", oAuth2Authentication.getOAuth2Request());
 				}});
 			}
 		};

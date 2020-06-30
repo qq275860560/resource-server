@@ -28,12 +28,14 @@ public class SecurityServiceImpl extends SecurityService {
 			 
 			put("/api/**/get*", new HashMap<String, Object>() {// 请注意正则表达式的写法，是两个*号
 				{				
-					put("scopes", "SCOPE_USER");// 至少要此权限才能访问,通常开放平台的接口才需要设置 这个属性
+					//put("scopes", "SCOPE_USER");// 至少要此权限才能访问,通常开放平台的接口才需要设置 这个属性
+					//put("roleNames", "ROLE_USER");// 只需此角色即可访问
 				}
 			});
 			put("/api/**/save*", new HashMap<String, Object>() {
 				{			
-					put("scopes", "SCOPE_ADMIN");// 至少要此权限才能访问,通常开放平台的接口才需要设置 这个属性
+					//put("scopes", "SCOPE_ADMIN");// 至少要此权限才能访问,通常开放平台的接口才需要设置 这个属性
+					//put("roleNames", "ROLE_ADMIN");// 只需此角色即可访问
 				}
 			});
 			 
